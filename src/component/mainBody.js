@@ -11,19 +11,43 @@ const MainBody = () => {
     const classes = MainStyle();
     return (
         <div className={classes.root}>
-        <Grid container spacing={3}>
-          <Grid item xs={12} sm={6}>
-            <Paper className={classes.paper1}><AppsIcon /><FormatListBulletedIcon /></Paper>
+          <Grid container spacing={3}>
+            <Grid item xs={12} sm={6}>
+              <Paper className={classes.paper1}><AppsIcon /><FormatListBulletedIcon /></Paper>
+            </Grid>
+            <Grid item xs={12} sm={6}>
+              <Paper className={classes.paper2}><Pagination count={3} color="primary" /></Paper>
+            </Grid>
           </Grid>
-          <Grid item xs={12} sm={6}>
-            <Paper className={classes.paper2}><Pagination count={3} color="primary" /></Paper>
-          </Grid>
-          </Grid>
-          <Grid item xs={12}>
-            <Grid item xs={3} >
+          <Grid container spacing={3}>
+            <Grid item xs={4} >
                   <Cards />
-                    </Grid>
-                </Grid>
+              </Grid>
+              <Grid item xs={4} >
+                  <Cards />
+              </Grid>
+              <Grid item xs={4} >
+                  <Cards />
+              </Grid>
+              <Grid item xs={4} >
+                  <Cards />
+              </Grid>
+              <Grid item xs={4} >
+                  <Cards />
+              </Grid>
+              <Grid item xs={4} >
+                  <Cards />
+              </Grid>
+              <Grid item xs={4} >
+                  <Cards />
+              </Grid>
+              <Grid item xs={4} >
+                  <Cards />
+              </Grid>
+              <Grid item xs={4} >
+                  <Cards />
+              </Grid>
+              </Grid>
           </div>
     );
 };
