@@ -2,18 +2,23 @@ import { makeStyles } from '@material-ui/core';
 
 const imgStyle = makeStyles((theme) => ({
     media: {
-        minWidth: 300,
-        minHeight: 450,
         filter: 'brightness(50%)',
-      },
-      overlay: {
+        height: "500px",
+        width: "100%",
+    },
+    overlay: {
         position: "absolute",
         top: "35%",
         width: "100%",
         textAlign: "center",
         color: "white",
-     },
-    }));
+    },
+    overlay2: {
+        position: "absolute",
+        top: "0%",
+        width: "100%",
+    }
+}));
 
 
 export default imgStyle;

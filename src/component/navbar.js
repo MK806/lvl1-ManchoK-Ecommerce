@@ -15,22 +15,20 @@ import Grid from '@material-ui/core/Grid';
 const NavBar = ({children}) => {
   const classes = useStyles();
   const [anchorEl, setAnchorEl] = React.useState(null);
-
   const handleClick = (event) => {
     setAnchorEl(event.currentTarget);
   };
-
   const handleClose = () => {
     setAnchorEl(null);
   };
   return (
-      <AppBar position="static" className={classes.menu}>
+      <AppBar position="static" className={classes.mainB}>
         <Toolbar>
-        <Grid container spacing={7}>
-          <Grid item xs={12} sm={7}>
-            <img src="https://iconape.com/wp-content/png_logo_vector/mdb.png" alt="logo" className={classes.logo} />
-          </Grid>
-          <Grid item xs={12} sm={5}>
+          <Grid container>
+            <Grid item xs={12} sm={8}>
+              <img src="https://iconape.com/wp-content/png_logo_vector/mdb.png" alt="logo" className={classes.logo} />
+            </Grid>
+          <Grid item xs={12} sm={4}>
             <IconButton aria-label="cart">
               <Badge badgeContent={1} color="secondary">
                 <ShoppingCartIcon />
@@ -42,7 +40,7 @@ const NavBar = ({children}) => {
             color="inherit"
             onClick={handleClick}
            >
-        <IconButton className={classes.flag}><IconFlagUK /><ArrowDropDownIcon /></IconButton>
+            <IconButton className={classes.flag}><IconFlagUK /><ArrowDropDownIcon /></IconButton>
           </Button>
           <Menu
             id="customized-menu"
@@ -65,10 +63,11 @@ const NavBar = ({children}) => {
           <Button color="inherit">Contact</Button>
           <Button color="inherit">Sign in</Button>
           <Button variant="outlined" className={classes.btn}>Sign up</Button>
-          </Grid>
-          </Grid>
-            </Toolbar>
-        </AppBar>
-  ); } 
+        </Grid>
+      </Grid>
+    </Toolbar>
+  </AppBar>
+  ); 
+} 
 
   export default NavBar;

@@ -1,24 +1,45 @@
 import './App.css';
-import NavBar from './component/navbar';
 import ImgCont from './component/imgCont';
 import Grid from '@material-ui/core/Grid';
 import SideBar from './component/sideBar';
 import MainBody from './component/mainBody';
+import { Container } from '@material-ui/core';
+import FootHeader from './component/footerHead';
+import FootMain from './component/footerMain';
+import FootBot from './component/footerBottom';
 
 function App() {
     return (
         <div>
-            <NavBar></NavBar>
-            <ImgCont></ImgCont>
-            <Grid container spacing={1}>
-                <Grid item xs={12} sm={4}>
-                    <SideBar></SideBar>
+            <Grid>
+                <ImgCont></ImgCont>
+            </Grid>
+            <Container>
+                <Grid container>
+                    <Grid item xs={12} sm={3}>
+                        <SideBar></SideBar>
+                    </Grid>
+                    <Grid item xs={12} sm={8}>
+                        <MainBody></MainBody>
+                    </Grid>
                 </Grid>
-                <Grid item xs={12} sm={8}>
-                   <MainBody></MainBody>
+            </Container>
+                <Grid container>
+                    <Grid item xs={12} sm={12}>
+                        <FootHeader></FootHeader>
+                    </Grid>
+                </Grid>  
+                    <Grid container>
+                        <Grid item xs={12} sm={12}>
+                            <FootMain></FootMain>
+                        </Grid>
+                    </Grid>
+                <Grid container>
+                    <Grid item xs={12} sm={12}>
+                        <FootBot></FootBot>
+                    </Grid>
                 </Grid>
-             </Grid>
-        </div>
+            </div>
     );
 }
 
