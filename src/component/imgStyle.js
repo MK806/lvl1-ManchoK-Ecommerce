@@ -6,6 +6,9 @@ const imgStyle = makeStyles((theme) => ({
         height: "500px",
         width: "100%",
     },
+    bCard: {
+        marginBottom: "80px",
+    },
     overlay: {
         position: "absolute",
         top: "35%",

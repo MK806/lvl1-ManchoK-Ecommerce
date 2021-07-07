@@ -7,8 +7,12 @@ const FootStyle = makeStyles((theme) => ({
       botRoot: {
         backgroundColor: "grey",
       },
+      fcont: {
+        marginTop: "80px",
+      },
       title1: {
-        marginLeft: "450px",
+        justifyContent: "center",
+        alignText: "center",
       },
 }));
 

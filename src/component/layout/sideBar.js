@@ -1,5 +1,5 @@
 import React from 'react';
-import StyleBar from '../styles/styleSideBar';
+import StyleBar from '../styleSideBar';
 import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemText from '@material-ui/core/ListItemText';
@@ -9,7 +9,6 @@ import FormGroup from '@material-ui/core/FormGroup';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
 import Checkbox from '@material-ui/core/Checkbox';
 import Rating from '@material-ui/lab/Rating';
-import Box from '@material-ui/core/Box';
 import RadioGroup from '@material-ui/core/RadioGroup';
 import Radio from '@material-ui/core/Radio';
 import FormLabel from '@material-ui/core/FormLabel';
@@ -71,12 +70,12 @@ const SideBar = () => {
               </List>
             <h3>Filters</h3>
             <Grid container spacing={1} className={classes.search}>
-                <Grid item xs={12} sm={8}>
+                <Grid item xs={6} sm={6} md={6} lg={8}>
                   <InputBase
                     placeholder="Search…"
                   />
                   </Grid>
-                  <Grid item xs={12} sm={4}>
+                  <Grid item xs={6} sm={6} md={6} lg={4}>
                     <Button><SearchIcon /></Button>
                   </Grid>
               </Grid>
@@ -105,20 +104,23 @@ const SideBar = () => {
             </div>
       <div>
         <h3>Avg. Customer Review</h3>
-          <Box component="fieldset" borderColor="transparent">
-            <div>
-            <Rating name="read-only" value={value4} readOnly />
-            </div>
-            <div>
-            <Rating name="read-only" value={value3} readOnly />
-            </div>
-            <div>
-            <Rating name="read-only" value={value2} readOnly />
-            </div>
-            <div>
-            <Rating name="read-only" value={value1} readOnly />
-            </div>
-          </Box>
+              <List>
+                  <ListItem button>
+                      <ListItemText><Rating name="read-only" value={value4} readOnly /></ListItemText>
+                  </ListItem>
+                  <ListItem button>
+                      <ListItemText><Rating name="read-only" value={value3} readOnly /></ListItemText>
+                  </ListItem>
+                  <ListItem button>
+                      <ListItemText><Rating name="read-only" value={value2} readOnly /></ListItemText>
+                  </ListItem>
+                  <ListItem button>
+                      <ListItemText><Rating name="read-only" value={value1} readOnly /></ListItemText>
+                  </ListItem>
+                  <ListItem button>
+                      <ListItemText><Rating name="read-only" value={value1} readOnly /></ListItemText>
+                  </ListItem>
+              </List> 
       </div>
       <FormControl component="fieldset">
         <FormLabel component="legend"></FormLabel>
@@ -131,11 +133,11 @@ const SideBar = () => {
             <FormControlLabel value="$200 & above" control={<Radio />} label="$200 & above" />
           </RadioGroup>
       </FormControl>
-        <Grid container spacing={3}>
-              <Grid item xs={12} sm={4}>
+        <Grid container spacing={2}>
+              <Grid item xs={12} sm={12} md={6} lg={4}>
                   <TextField id="outlined-basic" label="$Min" variant="outlined" />
                 </Grid>
-          <Grid item xs={12} sm={4}>
+          <Grid item xs={12} sm={12} md={6} lg={4}>
               <TextField id="outlined-basic" label="$Max" variant="outlined" />
           </Grid>
         </Grid>
@@ -147,7 +149,7 @@ const SideBar = () => {
             track={false}
             aria-labelledby="track-false-slider"
             getAriaValueText={valuetext}
-            defaultValue={30}
+            defaultValue={50}
             marks={marks}
           /> 
     </div>
@@ -176,42 +178,33 @@ const SideBar = () => {
         </div>
         <div className={classes.rootCol}>
           <h3>Color</h3>
-          <Tooltip title="Select">
-        <Fab color="primary" className={classes.fab}>
-        </Fab>
-      </Tooltip>
-      <Tooltip title="Select">
-        <Fab color="secondary" className={classes.fab}>
-        </Fab>
-      </Tooltip>
-      <Tooltip title="Select">
-        <Fab className={classes.fab1}>
-        </Fab>
-      </Tooltip>
-      <Tooltip title="Select">
-        <Fab className={classes.fab2}>
-        </Fab>
-      </Tooltip>
-      <Tooltip title="Select">
-        <Fab className={classes.fab3}>
-        </Fab>
-      </Tooltip>
-      <Tooltip title="Select">
-        <Fab className={classes.fab4}>
-        </Fab>
-      </Tooltip>
-      <Tooltip title="Select">
-        <Fab className={classes.fab5}>
-        </Fab>
-      </Tooltip>
-      <Tooltip title="Select">
-        <Fab className={classes.fab6}>
-        </Fab>
-      </Tooltip>
-      <Tooltip title="Select">
-        <Fab color="secondary" className={classes.fab7}>
-        </Fab>
-      </Tooltip>
+            <Tooltip title="Blue">
+              <Fab color="primary" className={classes.fab}></Fab>
+            </Tooltip>
+            <Tooltip title="Pink">
+              <Fab color="secondary" className={classes.fab}></Fab>
+            </Tooltip>
+            <Tooltip title="White">
+              <Fab className={classes.fab1}></Fab>
+            </Tooltip>
+            <Tooltip title="Gray">
+              <Fab className={classes.fab2}></Fab>
+            </Tooltip>
+            <Tooltip title="Green">
+              <Fab className={classes.fab3}></Fab>
+            </Tooltip>
+            <Tooltip title="Yellow">
+              <Fab className={classes.fab4}></Fab>
+            </Tooltip>
+            <Tooltip title="Blue">
+              <Fab className={classes.fab5}></Fab>
+            </Tooltip>
+            <Tooltip title="Purple">
+              <Fab className={classes.fab6}></Fab>
+            </Tooltip>
+            <Tooltip title="Black">
+              <Fab className={classes.fab7}></Fab>
+            </Tooltip>
         </div>
     </div>
 

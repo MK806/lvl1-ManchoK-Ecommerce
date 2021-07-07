@@ -1,5 +1,5 @@
 import React from 'react';
-import FootStyle from '../styles/footStyle';
+import FootStyle from '../../footStyle';
 import Typography from '@material-ui/core/Typography';
 import AppBar from '@material-ui/core/AppBar';
 import Container from '@material-ui/core/Container';
@@ -10,8 +10,8 @@ const FootBot = () => {
 return (
     <AppBar position="static" className={classes.botRoot}>
         <Container>
-            <Toolbar>
-                <Typography className={classes.title1}>
+            <Toolbar className={classes.title1}>
+                <Typography>
                 © 2020 Copyright: MDBootstrap.com
                 </Typography>
             </Toolbar>
